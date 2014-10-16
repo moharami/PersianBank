@@ -7,7 +7,7 @@
 	    array(
 			'try_again'  => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
 			'return_url' => array('plugin' =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'bank_result'	, 'admin'=>true),
-			'PIN'        => 'SLpL4380HE5fKH4tB8d4',
+			'PIN'        => 'your pin........',
 	    )
 	);
 // ************* Parsian Bank ***************************
