@@ -1,0 +1,13 @@
+
+In the Name of God
+==================
+
+PGW Site
+--------
+	Address		: 	https://pec.shaparak.ir/pecpaymentgateway
+
+	Web Service	: 	https://pec.shaparak.ir/pecpaymentgateway/EShopService.asmx
+
+
+Parsian e-Commerce co. 
+----------------------

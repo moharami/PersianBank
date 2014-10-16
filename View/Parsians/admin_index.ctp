@@ -1,0 +1,1 @@
+<h1><?php echo $this->Html->link("درخواست پرداخت", array('plugin'=>'parsian', 'controller'=>'Parsians', 'action'=>'gotoParsian','admin'=>true),array('class'=>'btn')); ?>	</h1>

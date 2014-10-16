@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PinPaymentRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="callbackUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="authority" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinPaymentRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="authority" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinPaymentEnquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="authority" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinPaymentEnquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinVoidPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderToVoid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinVoidPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinRefundPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderToRefund" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinRefundPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderToReversal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinSetDefaultCallbackUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PinSetDefaultCallbackUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:unsignedByte" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="PinPaymentRequestSoapIn">
+    <part name="parameters" element="s0:PinPaymentRequest" />
+  </message>
+  <message name="PinPaymentRequestSoapOut">
+    <part name="parameters" element="s0:PinPaymentRequestResponse" />
+  </message>
+  <message name="PinPaymentEnquirySoapIn">
+    <part name="parameters" element="s0:PinPaymentEnquiry" />
+  </message>
+  <message name="PinPaymentEnquirySoapOut">
+    <part name="parameters" element="s0:PinPaymentEnquiryResponse" />
+  </message>
+  <message name="PinVoidPaymentSoapIn">
+    <part name="parameters" element="s0:PinVoidPayment" />
+  </message>
+  <message name="PinVoidPaymentSoapOut">
+    <part name="parameters" element="s0:PinVoidPaymentResponse" />
+  </message>
+  <message name="PinRefundPaymentSoapIn">
+    <part name="parameters" element="s0:PinRefundPayment" />
+  </message>
+  <message name="PinRefundPaymentSoapOut">
+    <part name="parameters" element="s0:PinRefundPaymentResponse" />
+  </message>
+  <message name="PinReversalSoapIn">
+    <part name="parameters" element="s0:PinReversal" />
+  </message>
+  <message name="PinReversalSoapOut">
+    <part name="parameters" element="s0:PinReversalResponse" />
+  </message>
+  <message name="PinSetDefaultCallbackUrlSoapIn">
+    <part name="parameters" element="s0:PinSetDefaultCallbackUrl" />
+  </message>
+  <message name="PinSetDefaultCallbackUrlSoapOut">
+    <part name="parameters" element="s0:PinSetDefaultCallbackUrlResponse" />
+  </message>
+  <portType name="EShopServiceSoap">
+    <operation name="PinPaymentRequest">
+      <input message="s0:PinPaymentRequestSoapIn" />
+      <output message="s0:PinPaymentRequestSoapOut" />
+    </operation>
+    <operation name="PinPaymentEnquiry">
+      <input message="s0:PinPaymentEnquirySoapIn" />
+      <output message="s0:PinPaymentEnquirySoapOut" />
+    </operation>
+    <operation name="PinVoidPayment">
+      <input message="s0:PinVoidPaymentSoapIn" />
+      <output message="s0:PinVoidPaymentSoapOut" />
+    </operation>
+    <operation name="PinRefundPayment">
+      <input message="s0:PinRefundPaymentSoapIn" />
+      <output message="s0:PinRefundPaymentSoapOut" />
+    </operation>
+    <operation name="PinReversal">
+      <input message="s0:PinReversalSoapIn" />
+      <output message="s0:PinReversalSoapOut" />
+    </operation>
+    <operation name="PinSetDefaultCallbackUrl">
+      <input message="s0:PinSetDefaultCallbackUrlSoapIn" />
+      <output message="s0:PinSetDefaultCallbackUrlSoapOut" />
+    </operation>
+  </portType>
+  <binding name="EShopServiceSoap" type="s0:EShopServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="PinPaymentRequest">
+      <soap:operation soapAction="http://tempuri.org/PinPaymentRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PinPaymentEnquiry">
+      <soap:operation soapAction="http://tempuri.org/PinPaymentEnquiry" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PinVoidPayment">
+      <soap:operation soapAction="http://tempuri.org/PinVoidPayment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PinRefundPayment">
+      <soap:operation soapAction="http://tempuri.org/PinRefundPayment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PinReversal">
+      <soap:operation soapAction="http://tempuri.org/PinReversal" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PinSetDefaultCallbackUrl">
+      <soap:operation soapAction="http://tempuri.org/PinSetDefaultCallbackUrl" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EShopService">
+    <port name="EShopServiceSoap" binding="s0:EShopServiceSoap">
+      <soap:address location="https://www.pec24.com/pecpaymentgateway/EShopService.asmx" />
+    </port>
+  </service>
+</definitions>
