@@ -1,0 +1,103 @@
+﻿body
+{
+	background-image: url(../Images/BP.jpg);
+}
+
+.MainTable 
+{
+	border-color: #FEFEFE;
+	border-style: outset;
+	border-width: thin;
+	background-color: #AFAFAF;	
+	width: 400px;
+}
+
+.InputTable
+{
+	border-color: #FEFEFE;
+	border-style: outset;
+	border-width: thin;
+	background-color: #DEDEDE;	
+	width: 650px;
+}
+
+.HeaderTr
+{
+	background-color: #787878;	
+}
+
+.HeaderText
+{
+	font-family: Verdana;
+	font-size: 13;
+	font-weight: bold;
+	color: #eeefbd;	
+}
+
+.LabelTd
+{
+	font-family: Sans-Serif;
+	font-size: 11px;
+	width: 120px;
+	text-align : left;
+}
+
+.MainHref
+{
+	font-family: tahoma;
+	font-size: 12px;
+	color: Navy;	
+	text-decoration: none;
+}
+
+.PublicLink
+{
+	font-family: tahoma;
+	font-size: 12px;
+	color: Navy;	
+	text-decoration: none;
+}
+
+.PublicTextBox
+{
+	font-family: tahoma;
+	font-size: 12px;
+	color: Navy;	
+	width: 180px;
+}
+
+.PublicDropDownList
+{
+	font-family: tahoma;
+	font-size: 12px;
+	color: Navy;	
+	width: 185px;
+}
+
+.PublicButton
+{
+	font-family: tahoma;
+	font-size: 12px;
+	background-color: White;
+	color: Navy;	
+	width: 100px;
+}
+
+.InfoLabel
+{
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: Green;
+	color: Navy;	
+	width: 100px;
+}
+
+.ReportTitle
+{
+	font-family: Verdana;
+	font-size: 20px;
+	font-weight: bold;
+	color: Navy;	
+	width: 100px;
+}

@@ -80,7 +80,23 @@ documentaion that i reciver from parsian bank is placed in Vendor/Documentation/
 
 
 # Mellat
-i make Mellat Bank as soon as possible
+1. in the PersianBank Plugin Config/bootstrap.php you must add your setting 
+```php
+ Configure::write(
+     'Mellat',
+     array(
+        'try_again'    => array('plugin'  =>'payments'  ,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'           , 'admin'=>true),
+        'return_url'   => array('plugin'  =>'payments'  ,'controller' => 'PaymentAccountNumbers' , 'action' => 'mellat_result'  , 'admin'=>true),
+        'terminalId'   => '',
+        'userName'     => '',
+        'userPassword' => '',
+     )
+ );
+```
+* try_again  : this url is your payment page, if something wrong during payment , we get back user to the payment page
+* return_url : after user paid correctly the authority key get back to this url
+* PIN        : this is your pin that you recive from bank - this pin is unique and it set to your ip address that you send to parsian bank
+* terminalId
 
 
 # Tejarat 
