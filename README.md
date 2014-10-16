@@ -45,7 +45,7 @@ git submodule add https://github.com/moharami/PersianBank app/Plugin/PersianBank
 
 
 ### example of preparing your program to send user to bank site
-```
+```php
 /**
  * admin_send_to_bank method
  *
@@ -61,7 +61,7 @@ git submodule add https://github.com/moharami/PersianBank app/Plugin/PersianBank
 ```
 
 ### example of back data from bank
-```
+```php
 /**
  * bank_result method
  *
