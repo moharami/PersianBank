@@ -96,7 +96,46 @@ documentaion that i reciver from parsian bank is placed in Vendor/Documentation/
 * try_again  : this url is your payment page, if something wrong during payment , we get back user to the payment page
 * return_url : after user paid correctly the authority key get back to this url
 * PIN        : this is your pin that you recive from bank - this pin is unique and it set to your ip address that you send to parsian bank
-* terminalId
+* terminalId : terminalId that banks give to you
+* userName   :  username for this terminal id
+* userPassword : password for this terminal id
+
+### example of preparing your program to send user to bank site
+```php
+/**
+ * admin_mellat_send_to_bank method
+ *
+ * @return void
+ */
+    public function admin_mellat_send_to_bank(){
+        $price      = 1000; //Rials
+        $this->Session->write('amount', $price);
+        $this->redirect(array('plugin'=>'persian_bank', 'controller' => 'mellat', 'action' => 'bp_pay_request'));
+        
+    }
+```
+
+### example of back data from bank
+```php
+/**
+ * admin_mellat_result method
+ *
+ * @return void
+ */
+    public function admin_mellat_result(){
+        $this->Session->write('amir', 12);          
+        $data = $this->Session->read('data');
+        $this->Session->delete('data');
+
+        // this authority is successfull paid  - please attention delete this session(authority) after save your data in database
+        // save data 
+        
+    }
+```
+
+### Documentaion of Parsian
+documentaion that i reciver from parsian bank is placed in Vendor/Documentation/Mellat
+
 
 
 # Tejarat 
