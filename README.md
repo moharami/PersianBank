@@ -30,14 +30,14 @@ git submodule add https://github.com/moharami/PersianBank app/Plugin/PersianBank
 ## Parsian
 1. in the PersianBank Plugin Config/bootstrap.php you must add your setting 
 ```php
-	Configure::write(
-	    'Parsian',
-	    array(
-			'try_again'  => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
-			'return_url' => array('plugin' =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'bank_result'	, 'admin'=>true),
-			'PIN'        => 'your pin',
-	    )
-	);
+Configure::write(
+    'Parsian',
+    array(
+		'try_again'  => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
+		'return_url' => array('plugin' =>'payments'		,'controller' => 'PaymentAccountNumbers' , 'action' => 'bank_result'	, 'admin'=>true),
+		'PIN'        => 'SLpL4380HE5fKH4tB8d4',
+    )
+);
 ```
 * try_again  : this url is your payment page, if something wrong during payment , we get back user to the payment page
 * return_url : after user paid correctly the authority key get back to this url
