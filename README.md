@@ -122,8 +122,7 @@ documentaion that i reciver from parsian bank is placed in Vendor/Documentation/
  *
  * @return void
  */
-    public function admin_mellat_result(){
-        $this->Session->write('amir', 12);          
+    public function admin_mellat_result(){          
         $data = $this->Session->read('data');
         $this->Session->delete('data');
 
