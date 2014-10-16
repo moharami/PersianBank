@@ -18,8 +18,8 @@ Configure::write(
  Configure::write(
      'Mellat',
      array(
-     	'try_again'  => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
- 		'return_url' => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'mellat_result'	, 'admin'=>true),
+		'try_again'    => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
+		'return_url'   => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'mellat_result'	, 'admin'=>true),
 		'terminalId'   => '1489678',
 		'userName'     => 'kermany',
 		'userPassword' => '91913459',
@@ -27,6 +27,9 @@ Configure::write(
  );
  
  // ************* Mellat Bank ***************************
+
+
+
 
  
 
