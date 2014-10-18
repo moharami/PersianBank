@@ -188,7 +188,7 @@ documentaion that i reciver from parsian bank is placed in Vendor/Documentation/
     }
 ```
 
-### Documentaion of Parsian
+### Documentaion of Tejarat
 documentaion that i reciver from Tejarat bank is placed in Vendor/Documentation/Tejarat
 
 
