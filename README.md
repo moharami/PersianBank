@@ -138,5 +138,57 @@ documentaion that i reciver from parsian bank is placed in Vendor/Documentation/
 
 
 # Tejarat 
-i make Tejarat Bank as soon as possible
+1. in the PersianBank Plugin Config/bootstrap.php you must add your setting 
+```php
+ Configure::write(
+     'Tejarat',
+     array(
+        'try_again'    => array('plugin'  =>'payments'  ,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'           , 'admin'=>true),
+        'return_url'   => array('plugin'  =>'payments'  ,'controller' => 'PaymentAccountNumbers' , 'action' => 'tejarat_result' , 'admin'=>true),
+        'merchantId'   => 'A2A4',   
+     )
+ );
+```
+* try_again  : this url is your payment page, if something wrong during payment , we get back user to the payment page
+* return_url : after user paid correctly the authority key get back to this url
+* merchantId        : this is your merchantId that you recive from bank 
+
+
+### example of preparing your program to send user to bank site
+```php
+/**
+ * admin_mellat_send_to_bank method
+ *
+ * @return void
+ */
+    public function admin_tejarat_send_to_bank(){
+        $price      = 1000; //Rials
+        $this->Session->write('amount', $price);
+        $this->redirect(array('plugin'=>'persian_bank', 'controller' => 'Tejarat', 'action' => 'send_to_tejarat'));
+        
+    }
+```
+
+### example of back data from bank
+```php
+/**
+ * admin_tejarat_result method
+ *
+ * @return void
+ */
+    public function admin_tejarat_result(){ 
+    debug($this->request->data);
+            die();      
+        $data = $this->Session->read('data');
+        $this->Session->delete('data');
+
+        // this authority is successfull paid  - please attention delete this session(authority) after save your data in database
+        // save data 
+        
+    }
+```
+
+### Documentaion of Parsian
+documentaion that i reciver from Tejarat bank is placed in Vendor/Documentation/Tejarat
+
 
