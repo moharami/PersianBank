@@ -6,7 +6,7 @@ Configure::write(
     'Parsian',
     array(
 		'try_again'  => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
-		'return_url' => array('plugin' =>'payments'		,'controller' => 'PaymentAccountNumbers' , 'action' => 'bank_result'	, 'admin'=>true),
+		'return_url' => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'bank_result'	, 'admin'=>true),
 		'PIN'        => 'SLpL4380HE5fKH4tB8d4',
     )
 );
@@ -27,6 +27,23 @@ Configure::write(
  );
  
  // ************* Mellat Bank ***************************
+
+ 
+
+
+
+
+  // ************* Tejarat Bank ***************************
+  Configure::write(
+      'Tejarat',
+      array(
+ 		'try_again'    => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'list'			, 'admin'=>true),
+ 		'return_url'   => array('plugin'  =>'payments'	,'controller' => 'PaymentAccountNumbers' , 'action' => 'tejarat_result'	, 'admin'=>true),
+ 		'merchantId'   => 'A2A4',	
+      )
+  );
+  
+  // ************* Tejarat Bank ***************************
 
 
 
